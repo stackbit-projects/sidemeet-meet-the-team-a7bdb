@@ -1,0 +1,269 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match: '*'
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: desc
+        label: Desc
+      - type: string
+        name: keywords
+        label: Keywords
+      - type: list
+        name: categories
+        label: Categories
+        items:
+          type: string
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: string
+        name: icon
+        label: Icon
+  blog:
+    type: data
+    label: Blog
+    file: blog.yml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: name
+          label: Name
+        - type: string
+          name: href
+          label: Href
+  alipay:
+    type: data
+    label: Alipay
+    file: donation/alipay.yml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: image
+          name: name
+          label: Name
+  donationlist:
+    type: data
+    label: Donationlist
+    file: donation/donationlist.yml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: name
+          label: Name
+        - type: markdown
+          name: account
+          label: Account
+        - type: string
+          name: github
+          label: Github
+        - type: string
+          name: website
+          label: Website
+        - type: string
+          name: type
+          label: Type
+        - type: number
+          name: value
+          label: Value
+          subtype: float
+        - type: date
+          name: date
+          label: Date
+  wechat_pay:
+    type: data
+    label: Wechat Pay
+    file: donation/wechat_pay.yml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: image
+          name: name
+          label: Name
+  banners:
+    type: data
+    label: Banners
+    file: index/banners.yml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: image
+          name: src
+          label: Src
+        - type: string
+          name: title
+          label: Title
+  careers:
+    type: data
+    label: Careers
+    file: index/careers.yml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: object
+          name: name
+          label: Name
+          fields:
+            - type: string
+              name: detail
+              label: Detail
+            - type: string
+              name: i18n
+              label: I 18 N
+        - type: object
+          name: desc
+          label: Desc
+          fields:
+            - type: string
+              name: detail
+              label: Detail
+            - type: string
+              name: i18n
+              label: I 18 N
+        - type: object
+          name: date
+          label: Date
+          fields:
+            - type: string
+              name: detail
+              label: Detail
+            - type: string
+              name: i18n
+              label: I 18 N
+        - type: object
+          name: job
+          label: Job
+          fields:
+            - type: string
+              name: detail
+              label: Detail
+            - type: string
+              name: i18n
+              label: I 18 N
+        - type: string
+          name: icon
+          label: Icon
+        - type: boolean
+          name: present
+          label: Present
+  links:
+    type: data
+    label: Links
+    file: index/links.yml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: last_name
+          label: Last Name
+        - type: string
+          name: first_name
+          label: First Name
+        - type: string
+          name: desc
+          label: Desc
+        - type: string
+          name: website
+          label: Website
+        - type: string
+          name: email
+          label: Email
+  projects:
+    type: data
+    label: Projects
+    file: index/projects.yml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: name
+          label: Name
+        - type: string
+          name: i18n
+          label: I 18 N
+        - type: string
+          name: gh_user
+          label: Gh User
+        - type: string
+          name: repo
+          label: Repo
+        - type: image
+          name: img
+          label: Img
+        - type: string
+          name: desc
+          label: Desc
+        - type: string
+          name: url
+          label: Url
+  skills:
+    type: data
+    label: Skills
+    file: index/skills.yml
+    fields:
+      - type: string
+        name: label
+        label: Label
+      - type: string
+        name: id
+        label: Id
+      - type: string
+        name: aspects
+        label: Aspects
+      - type: string
+        name: percentage
+        label: Percentage
+  landing:
+    type: data
+    label: Landing
+    file: landing.yml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: id
+          label: Id
+        - type: string
+          name: i18n
+          label: I 18 N
+        - type: string
+          name: name
+          label: Name
+        - type: string
+          name: tpl
+          label: Tpl
+        - type: string
+          name: page
+          label: Page
+        - type: string
+          name: css
+          label: Css
